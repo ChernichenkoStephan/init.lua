@@ -20,6 +20,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>w', vim.cmd.write)
 vim.keymap.set('n', '<leader>q', vim.cmd.bdelete)
 
+vim.keymap.set("n", "<leader>c", ":!")
+
 -- <F11> spell check for eng and rus
 vim.keymap.set('n', '<F11>', ':set spell!<CR>')
 vim.keymap.set('i', '<F11>', '<C-O>:set spell!<CR>')
@@ -45,7 +47,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- chmod +x current file
-vim.keymap.set("n", "<leader>cmx", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>chx", "<cmd>!chmod +x %<CR>", { silent = true })
 
 --[[
 -- windows movement, very handy with nvim-tree

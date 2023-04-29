@@ -3,6 +3,7 @@ vim.opt.mouse = 'a'
 vim.opt.colorcolumn = '90'              -- Line in the right
 vim.opt.cursorline = true               
 vim.opt.spelllang= { 'en_us', 'ru' }    
+vim.opt.spell= true
 vim.opt.number = true                   
 vim.opt.relativenumber = true           
 vim.api.nvim_exec('language en_US', true)

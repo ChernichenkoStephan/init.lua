@@ -57,6 +57,10 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- https://github.com/mg979/vim-visual-multi
+  -- multycoursor capability to vim
+  use {'mg979/vim-visual-multi', branch = 'master'}
+
   ------------------------------------------------------------------------
   -- Visual
   ------------------------------------------------------------------------
@@ -162,6 +166,60 @@ return require('packer').startup(function(use)
     end,
   })
 
+  -- https://github.com/sindrets/diffview.nvim
+  -- pluggin for diff view for git
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  
+  -- https://github.com/gelguy/wilder.nvim 
+  -- pluggin for terminal line (that one with ":")
+  use {
+    'gelguy/wilder.nvim',
+    config = function()
+      -- config goes here
+    end,
+  }
+
+  -- https://github.com/preservim/tagbar
+  -- for mac we need ctags
+  -- brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+  use {'preservim/tagbar'}
+
+  -- https://github.com/folke/which-key.nvim 
+  -- shows keymaps suggestions
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+  -- Lua
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+  -- code runner plugin
+  -- https://github.com/michaelb/sniprun
+  use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
+  -- git diff viewer
+  -- https://github.com/sindrets/diffview.nvim
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  
   ------------------------------------------------------------------------
   -- Packer default
   ------------------------------------------------------------------------

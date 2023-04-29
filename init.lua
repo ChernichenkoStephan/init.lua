@@ -7,6 +7,7 @@ Sources:
 * Rabbit hole of plugins https://www.lunarvim.org/docs/plugins/core-plugins-list
 * Vim cheatsheet https://vim.rtorr.com/
 * Source of truth https://github.com/nanotee/nvim-lua-guide
+* Remap doc https://neovim.io/doc/user/intro.html#<>
 --]]
 
 require('settings.remap')
@@ -21,3 +22,11 @@ require('plugins.fugitive')
 require("plugins.treesitter")
 require("plugins.bufferline")
 require("plugins.nvimtree")
+require("plugins.multicur")
+require("plugins.tagbar")
+require("plugins.whichkey")
+require("plugins.trouble")
+require("plugins.sniprun")
+require("plugins.diffview")
+require("plugins.vimgo")
+
