@@ -8,3 +8,5 @@ for i = 0, 9 do
   rhs = string.format(":BufferLineGoToBuffer %d<CR>",i)
   vim.keymap.set('n', lhs, rhs)
 end
+
+vim.keymap.set('n', '<leader>C', ':%bd|e#')

@@ -4,6 +4,7 @@ vim.opt.colorcolumn = '90'              -- Line in the right
 vim.opt.cursorline = true               
 vim.opt.spelllang= { 'en_us', 'ru' }    
 vim.opt.spell= true
+
 vim.opt.number = true                   
 vim.opt.relativenumber = true           
 vim.api.nvim_exec('language en_US', true)
@@ -17,6 +18,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.updatetime = 50
+
 
 -----------------------------------------------------------------
 -- Tabs and spaces
