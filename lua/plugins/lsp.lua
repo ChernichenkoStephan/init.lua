@@ -84,3 +84,16 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
+require('mason-lspconfig').setup({
+  handlers = {
+    lsp.default_setup,
+    tsserver = function()
+      require('lspconfig').tsserver.setup({
+        single_file_support = false,
+        on_attach = function(client, bufnr)
+          -- config here
+        end
+      })
+    end,
+  }
+})
